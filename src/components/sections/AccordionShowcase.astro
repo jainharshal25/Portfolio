@@ -1,5 +1,5 @@
 ---
-import AccordionGallery from '~/components/ui/AccordianGallery';
+import { ImageGalleryModalRoot } from '~/components/ui/ImageGalleryModal';
 import { VideoGalleryModalRoot } from '~/components/ui/VideoGalleryModal';
 
 const posters = [
@@ -64,7 +64,7 @@ const animatedVideos = [
         <span class="accordion-showcase__number">01</span>
         <h3>Posters</h3>
       </div>
-      <AccordionGallery items={posters} defaultIndex={2} client:load />
+      <ImageGalleryModalRoot items={posters} kind="Poster" defaultIndex={2} client:load />
     </article>
 
     <article class="accordion-showcase__group reveal">
@@ -72,7 +72,7 @@ const animatedVideos = [
         <span class="accordion-showcase__number">02</span>
         <h3>Logos</h3>
       </div>
-      <AccordionGallery items={logos} defaultIndex={1} accentColor="#56a8ff" overlayColor="#071426" client:load />
+      <ImageGalleryModalRoot items={logos} kind="Logo" defaultIndex={1} client:load />
     </article>
 
     <article class="accordion-showcase__group reveal">
