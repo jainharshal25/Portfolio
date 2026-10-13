@@ -1,12 +1,12 @@
 @import '@fontsource-variable/inter-tight';
 
 :root {
-  --ink: #f2f7f3;
-  --ink-soft: rgb(242 247 243 / 68%);
-  --accent: #3dff8f;
+  --ink: #f7fbff;
+  --ink-soft: rgb(226 237 249 / 72%);
+  --accent: #56a8ff;
   /* Frosted "smudge-clear" glass that floats over the film. */
-  --glass-bg: rgb(12 22 16 / 34%);
-  --glass-bg-solid: rgb(10 18 13 / 88%);
+  --glass-bg: rgb(13 31 58 / 58%);
+  --glass-bg-solid: rgb(10 27 52 / 94%);
   --glass-border: rgb(255 255 255 / 12%);
   --glass-highlight: inset 0 1px 0 rgb(255 255 255 / 10%);
   --glass-shadow: 0 18px 50px -12px rgb(0 0 0 / 55%), 0 2px 8px rgb(0 0 0 / 25%);
@@ -15,8 +15,9 @@
 }
 
 * { box-sizing: border-box; }
-html { background: #050908; color-scheme: dark; }
+html { background: #071426; color-scheme: dark; }
 body { margin: 0; font-family: var(--font-ui); color: var(--ink); -webkit-font-smoothing: antialiased; }
+.static-world { min-height: 100vh; background: radial-gradient(circle at 85% 8%, rgb(39 105 178 / 24%), transparent 34rem), linear-gradient(145deg, #071426 0%, #0b2342 52%, #071426 100%); }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
@@ -69,13 +70,13 @@ a { color: inherit; }
   display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
   font-size: .78rem; font-weight: 550; color: var(--ink); background: rgb(255 255 255 / 7%); border: 1px solid rgb(255 255 255 / 10%);
 }
-.chip--accent { color: #04140b; background: var(--accent); border-color: transparent; }
+.chip--accent { color: #071426; background: var(--accent); border-color: transparent; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px;
   font-weight: 600; font-size: .95rem; text-decoration: none; transition: transform .2s ease, background .2s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn--primary { background: var(--accent); color: #04140b; box-shadow: 0 10px 30px -8px rgb(61 255 143 / 55%); }
+.btn--primary { background: var(--accent); color: #071426; box-shadow: 0 10px 30px -8px rgb(86 168 255 / 55%); }
 .btn--ghost { color: var(--ink); background: rgb(255 255 255 / 8%); border: 1px solid rgb(255 255 255 / 14%); }
 /* Gentle reveal; content is visible without JS and under reduced motion. */
 .reveal { opacity: 1; transform: none; }

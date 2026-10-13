@@ -1,12 +1,13 @@
 ---
 import { experience, education, certifications, languages } from '~/data/profile';
+import { pageCopy } from '~/lib/site';
 // Show the degrees that matter on a résumé; schooling stays in the data.
 const degrees = education.slice(0, 3);
 const initials = (name: string) => name.split(/\s+/).filter((w) => /^[A-Z]/.test(w)).slice(0, 2).map((w) => w[0]).join('');
 ---
 <section class="section" id="experience" aria-labelledby="experience-title">
-  <p class="section__kicker reveal">Experience</p>
-  <h2 id="experience-title" class="section__title reveal">Where I've done the work.</h2>
+  <p class="section__kicker reveal">{pageCopy.experience.kicker}</p>
+  <h2 id="experience-title" class="section__title reveal">{pageCopy.experience.title}</h2>
   <ol class="roles" role="list">
     {experience.map((role) => (
       <li class="glass role reveal" data-tilt>
@@ -41,9 +42,11 @@ const initials = (name: string) => name.split(/\s+/).filter((w) => /^[A-Z]/.test
       </ul>
     </div>
     <div class="glass panel reveal" data-tilt>
-      <h3 class="creds__title">Certifications</h3>
-      <ul class="chips" role="list">{certifications.map((cert) => <li class="chip">{cert}</li>)}</ul>
-      <h3 class="creds__title creds__title--spaced">Languages</h3>
+      {certifications.length > 0 && <>
+        <h3 class="creds__title">Certifications</h3>
+        <ul class="chips" role="list">{certifications.map((cert) => <li class="chip">{cert}</li>)}</ul>
+      </>}
+      <h3 class:list={['creds__title', { 'creds__title--spaced': certifications.length > 0 }]}>Languages</h3>
       <ul class="chips" role="list">{languages.map((language) => <li class="chip">{language}</li>)}</ul>
     </div>
   </div>

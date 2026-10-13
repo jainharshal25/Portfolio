@@ -2,19 +2,21 @@
 export type Capability = { title: string; body: string; proof: string };
 
 export const primary: Capability[] = [
-  { title: 'Skill one', body: 'One or two sentences on what you do and the outcome it produces.', proof: 'Where you did it' },
-  { title: 'Skill two', body: 'Lead with the result, not the tool.', proof: 'Project One' },
-  { title: 'Skill three', body: 'Keep each card short enough to read at a glance.', proof: 'Acme Labs' },
-  { title: 'Skill four', body: 'Name the numbers that matter in your field.', proof: 'Northwind Studio' },
-  { title: 'Skill five', body: 'Six cards fill the 3-column grid evenly.', proof: 'Project Two' },
-  { title: 'Skill six', body: 'Proof lines turn claims into evidence.', proof: 'Placeholder Agency' },
+  { title: 'HTML', body: 'Structuring accessible, semantic, and well-organized web pages for clear content and reliable browser behavior.', proof: 'Responsive website development and semantic page layouts.' },
+  { title: 'CSS', body: 'Creating responsive layouts, visual systems, animations, and polished interfaces across screen sizes.', proof: 'Custom layouts, responsive styling, and cross-device testing.' },
+  { title: 'JavaScript', body: 'Adding interactive behavior, dynamic content, and practical browser-side functionality to web experiences.', proof: 'Interactive interfaces, form integrations, and frontend features.' },
+  { title: 'React', body: 'Building reusable components and maintainable interfaces for modern web applications.', proof: 'Component-based development and frontend project work.' },
+  { title: 'Next.js', body: 'Developing structured React applications with modern routing, rendering, and scalable frontend patterns.', proof: 'React fundamentals and modern web application development.' },
+  { title: 'Canva', body: 'Creating visual assets, presentation graphics, and design material that support digital products and communication.', proof: 'Portfolio visuals, social assets, and project presentation work.' },
 ];
 
 export const secondary: Capability[] = [
-  { title: 'Skill seven', body: 'A second group — e.g. engineering, research, or leadership.', proof: 'Project Three' },
-  { title: 'Skill eight', body: 'Rename the section titles in src/pages/index.astro.', proof: 'Project Five' },
-  { title: 'Skill nine', body: 'Delete a group entirely if one is enough.', proof: 'Project One' },
-  { title: 'Skill ten', body: 'Every card tilts toward the pointer on desktop.', proof: 'This template' },
-  { title: 'Skill eleven', body: 'Touch devices and reduced motion keep cards flat.', proof: 'This template' },
-  { title: 'Skill twelve', body: 'Replace this copy with your own.', proof: 'You' },
+  { title: 'Django', body: 'Building structured Python web applications with clear models, views, routing, and backend workflows.', proof: 'Python web development and project-based Django experience.' },
+  { title: 'Python', body: 'Writing backend logic, automation scripts, data processing tasks, and application services.', proof: 'Python programming practice, automation, and application development.' },
+  { title: 'PyTorch', body: 'Exploring deep-learning workflows, tensor computation, and model experimentation in Python.', proof: 'Artificial Intelligence specialization and project-based machine-learning work.' },
+  { title: 'Streamlit', body: 'Turning Python data and machine-learning work into interactive applications and useful demonstrations.', proof: 'Python-based prototypes and AI/ML project presentation.' },
+  { title: 'TensorFlow', body: 'Working with machine-learning concepts, model development, and AI experimentation.', proof: 'Computer Science - Artificial Intelligence background and practical projects.' },
+  { title: 'SQL', body: 'Writing queries and managing relational data for reliable application features and reporting.', proof: 'CRUD operations, data retrieval, joins, and database-driven development.' },
+  { title: 'PostgreSQL', body: 'Designing and working with structured relational databases for scalable backend applications.', proof: 'Database integration and backend project development.' },
+  { title: 'MongoDB', body: 'Working with document-oriented data for flexible application models and backend services.', proof: 'Project-based database development and application data management.' },
 ];

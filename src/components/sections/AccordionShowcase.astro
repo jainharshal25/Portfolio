@@ -1,0 +1,97 @@
+---
+import AccordionGallery from '~/components/ui/AccordianGallery';
+import { VideoGalleryModalRoot } from '~/components/ui/VideoGalleryModal';
+
+const posters = [
+  { image: '/projects/Poster_1.png', label: 'Poster 1', link: '#projects' },
+  { image: '/projects/Poster_2.png', label: 'Poster 2', link: '#projects' },
+  { image: '/projects/Poster_3.png', label: 'Poster 3', link: '#projects' },
+  { image: '/projects/Poster_4.jpg', label: 'Poster 4', link: '#projects' },
+  { image: '/projects/Poster_5.png', label: 'Poster 5', link: '#projects' },
+];
+
+const logos = [
+  { image: '/projects/Logo_1.png', label: 'Logo 1', link: '#contact' },
+  { image: '/projects/Logo_2.png', label: 'Logo 2', link: '#contact' },
+  { image: '/projects/Logo_3.png', label: 'Logo 3', link: '#contact' },
+  { image: '/projects/Logo_4.png', label: 'Logo 4', link: '#contact' },
+  { image: '/projects/Logo_5.jpg', label: 'Logo 5', link: '#contact' },
+];
+
+const animatedVideos = [
+    {
+    image: '/projects/Poster_4.png',
+    video: '/projects/ai-video-4.mp4',
+    label: 'AI video 1',
+    prompt: 'Create a photorealistic, cinematic 10-second vertical 9:16 brand introduction for Hiteshi Infotech. Use the supplied company logo and actual office building photograph as references. Open with a futuristic city at dawn with subtle digital networks, transition into the real Hiteshi office exterior, then show AI visualizations, software interfaces, and digital systems. Finish with a clean brand reveal featuring the original Hiteshi logo and the tagline "Only Your Success Matters." Use blue and green brand accents, smooth camera movements, professional corporate voice-over, and cinematic sound design. Preserve the building architecture, logo, typography, and proportions. Avoid distorted text, invented logos, excessive effects, and inconsistent visuals.'
+  },
+  {
+    image: '/projects/Poster_1.png',
+    video: '/projects/ai-video-1.mp4',
+    label: 'AI video 2',
+    prompt: 'Create an animation explaining how the Andaman and Nicobar Islands formed through coral reefs. Show a cinematic geological time-lapse of coral growth, reef development, and island formation.'
+  },
+  {
+    image: '/projects/Poster_2.png',
+    video: '/projects/ai-video-2.mp4',
+    label: 'AI video 3',
+    prompt: 'Create a photorealistic, cinematic 10-second vertical 9:16 running reel using the supplied reference image as the exact mid-sequence keyframe. Preserve both runners’ facial identity, expressions, moustache, tattoos, clothing, accessories, body proportions, and relative positions. Use six camera compositions: wide frontal tracking, side tracking, reference-matched frontal shot, low-angle footwork, rear tracking, and elevated wide pullback. Maintain realistic running biomechanics, wet asphalt reflections, overcast rural scenery, smooth transitions, and documentary-style color grading. No facial-expression changes, distorted anatomy, flickering tattoos, duplicated limbs, or added people. Add typography only in post-production.'
+  },
+  {
+    image: '/projects/Poster_3.png',
+    video: '/projects/ai-video-3.mp4',
+    label: 'AI video 4',
+    prompt: 'A young man with short dark brown hair, a medium beard and tattoos, wearing a black running top, running shorts, white sneakers and reflective lime-green sunglasses, runs through downtown New York City. The footage is grim, grainy and shows frantic, chaotic movement and blurry images.'
+  },
+  
+  {
+    image: '/projects/Poster_5.png',
+    video: '/projects/ai-video-5.mp4',
+    label: 'AI video 5',
+    prompt: 'Create a photorealistic, dark and mysterious 10-second vertical 9:16 historical documentary about Akbar’s Silent Experiment. Use the supplied reference image as the exact first frame, preserving Akbar’s facial identity, clothing, turban, throne, and environment. Use six fast-paced scenes: Akbar contemplating a question, ordering an experiment, a secluded Mughal nursery with babies in wooden cradles, a heavy door closing into silence, an hourglass showing time passing, and a final shadowy nursery ending on black. Include cinematic camera movements, realistic Mughal architecture, amber lighting, suspenseful sound design, and bold readable overlays: "WHAT IS THE FIRST LANGUAGE?", "AKBAR’S STRANGE EXPERIMENT", "NO SPOKEN WORDS", "COMPLETE SILENCE", "MONTHS PASSED…", "THE RESULT? SILENCE.", and "LANGUAGE IS LEARNED." Keep character identity consistent and anatomy realistic. Avoid modern objects, distorted faces, flickering geometry, and extra text. Present the story as a historical account or legend, not scientific proof.'
+  }
+];
+---
+
+<section class="section accordion-showcase" id="showcase" aria-labelledby="showcase-title">
+  <p class="section__kicker reveal">Visual highlights</p>
+  <h2 id="showcase-title" class="section__title reveal">A closer look at the work.</h2>
+  <p class="section__lede reveal">Explore selected visuals, platforms, and motion-led work through three interactive galleries.</p>
+
+  <div class="accordion-showcase__groups">
+    <article class="accordion-showcase__group reveal">
+      <div class="accordion-showcase__heading">
+        <span class="accordion-showcase__number">01</span>
+        <h3>Posters</h3>
+      </div>
+      <AccordionGallery items={posters} defaultIndex={2} client:load />
+    </article>
+
+    <article class="accordion-showcase__group reveal">
+      <div class="accordion-showcase__heading">
+        <span class="accordion-showcase__number">02</span>
+        <h3>Logos</h3>
+      </div>
+      <AccordionGallery items={logos} defaultIndex={1} accentColor="#56a8ff" overlayColor="#071426" client:load />
+    </article>
+
+    <article class="accordion-showcase__group reveal">
+      <div class="accordion-showcase__heading">
+        <span class="accordion-showcase__number">03</span>
+        <h3>Animated videos</h3>
+      </div>
+      <VideoGalleryModalRoot items={animatedVideos} client:load />
+    </article>
+  </div>
+</section>
+
+<style>
+  .accordion-showcase__groups { display: grid; gap: 28px; margin-top: clamp(28px, 4vw, 48px); }
+  .accordion-showcase__group { display: grid; gap: 14px; }
+  .accordion-showcase__heading { display: flex; align-items: baseline; gap: 12px; }
+  .accordion-showcase__heading h3 { margin: 0; font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 650; }
+  .accordion-showcase__number { color: var(--accent); font-size: .75rem; font-weight: 700; letter-spacing: .14em; }
+  @media (max-width: 620px) {
+    .accordion-showcase__groups { gap: 22px; }
+  }
+</style>

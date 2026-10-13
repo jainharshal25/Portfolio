@@ -8,14 +8,12 @@ import { getIconData, iconToSVG, iconToHTML, replaceIDs } from '@iconify/utils';
 // Marks that are black in the official artwork and vanish on the dark glass.
 const MONO = new Set(['expo-icon', 'elevenlabs', 'astro-icon']);
 const rows = [
-  { label: 'Market with', tools: [
-    ['meta-icon', 'Meta Ads'], ['google-ads', 'Google Ads'], ['tiktok-icon', 'TikTok'], ['shopify', 'Shopify'],
-    ['google-analytics', 'GA4'], ['google-tag-manager', 'Google Tag Manager'], ['whatsapp-icon', 'WhatsApp'], ['hubspot', 'HubSpot'],
+  { label: 'Frontend', tools: [
+    ['html-5', 'HTML'], ['css-3', 'CSS'], ['javascript', 'JavaScript'], ['react', 'React'], ['nextjs-icon', 'Next.js'],
   ] },
-  { label: 'Build with', tools: [
-    ['claude-icon', 'Claude'], ['python', 'Python'], ['fastapi-icon', 'FastAPI'], ['react', 'React'], ['astro-icon', 'Astro'],
-    ['typescript-icon', 'TypeScript'], ['supabase-icon', 'Supabase'], ['postgresql', 'PostgreSQL'], ['cloudflare-icon', 'Cloudflare'],
-    ['google-cloud', 'Google Cloud'], ['stripe', 'Stripe'], ['twilio-icon', 'Twilio'], ['elevenlabs', 'ElevenLabs'], ['swift', 'Swift'], ['expo-icon', 'Expo'],
+  { label: 'Backend', tools: [
+    ['django-icon', 'Django'], ['python', 'Python'], ['pytorch-icon', 'PyTorch'], ['streamlit', 'Streamlit'],
+    ['tensorflow', 'TensorFlow'], ['mysql', 'SQL'], ['postgresql', 'PostgreSQL'], ['mongodb-icon', 'MongoDB'],
   ] },
 ];
 const svg = (id: string) => {

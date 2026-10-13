@@ -9,17 +9,18 @@ import Projects from '~/components/sections/Projects.astro';
 import Experience from '~/components/sections/Experience.astro';
 import Contact from '~/components/sections/Contact.astro';
 import LogoMarquee from '~/components/LogoMarquee.astro';
+import AccordionShowcase from '~/components/sections/AccordionShowcase.astro';
 import { primary, secondary } from '~/data/capabilities';
+import { pageCopy } from '~/lib/site';
 ---
 <Base>
   <FloatingHeader slot="header" />
   <ScrollFilm>
     <Hero />
     <LogoMarquee />
-    <Capabilities id="skills" kicker="What I do" title="The work I'm hired for."
-      lede="One line on the value you bring. Edit these cards in src/data/capabilities.ts." items={primary} />
-    <Capabilities id="craft" kicker="How I work" title="The tools and habits behind it."
-      lede="A second group of six — or delete this section if one is enough." items={secondary} />
+    <AccordionShowcase />
+    <Capabilities id="skills" {...pageCopy.capabilities.primary} items={primary} />
+    <Capabilities id="craft" {...pageCopy.capabilities.secondary} items={secondary} />
     <Projects />
     <Experience />
     <Contact />

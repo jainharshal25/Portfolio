@@ -6,50 +6,54 @@ export type Role = { role: string; org: string; period: string; place: string; s
 export type School = { school: string; credential: string; period: string; logo?: string };
 
 export const proof: Proof[] = [
-  { value: '2018', label: 'Started in the field' },
-  { value: '40+', label: 'Projects shipped' },
-  { value: '3', label: 'Products launched' },
-  { value: '2', label: 'Degrees' },
+  { value: '1+', label: 'Year of professional web development experience' },
+  { value: '4', label: 'Frontend, backend, CMS, and database areas' },
+  { value: 'B.Tech', label: 'Computer Science - Artificial Intelligence' },
+  { value: 'Full Stack', label: 'Web and application development' },
 ];
 
 export const experience: Role[] = [
   {
-    role: 'Senior Product Designer',
-    org: 'Northwind Studio',
-    period: '2024 - Present',
+    role: 'Web Developer',
+    org: 'Infinity Online Solutions',
+    period: 'January 2025 - February 2026',
     place: 'Remote',
-    summary: 'Lead design on the core product, from research through to shipped UI.',
+    summary: 'Worked on website development, WordPress customization, backend functionality, integrations, and ongoing website maintenance.',
     bullets: [
-      'Replace this with a result you are proud of, with a number if you have one.',
-      'Describe the scope: the team, the product, the people you worked with.',
-      'Keep each bullet to one line a recruiter can scan in two seconds.',
+      'Developed and customized WordPress websites, themes, templates, and plugins using PHP, MySQL, Elementor, and WooCommerce.',
+      'Integrated APIs, forms, and website functionality while troubleshooting technical issues and conducting regular website testing and maintenance.',
+      'Worked on website performance optimization, responsive design, SEO enhancements, hosting and cPanel tasks, and basic Python automation where applicable.',
     ],
   },
   {
-    role: 'Product Designer',
-    org: 'Acme Labs',
-    period: '2021 - 2024',
-    place: 'Your City',
-    summary: 'Designed and tested features for a fast-growing consumer app.',
+    role: 'Full Stack Development Intern',
+    org: 'IBM / All Soft - Internship Program',
+    period: 'February 2024 - May 2024',
+    place: 'India',
+    summary: 'Gained practical full-stack development experience while contributing to a pharmacy management website as part of a collaborative development team.',
     bullets: [
-      'Shipped a redesign that improved a metric you can name.',
-      'Ran weekly usability tests and fed the results into the roadmap.',
+      'Contributed to developing website features and application functionality for a pharmacy management project.',
+      'Led a team of four during project activities, coordinating task completion and collaborating on implementation.',
+      'Applied programming, debugging, teamwork, and problem-solving skills while developing the project.',
     ],
   },
   {
-    role: 'Junior Designer',
-    org: 'Placeholder Agency',
-    period: '2018 - 2021',
-    place: 'Remote',
-    summary: 'Client work across branding, web and campaign design.',
-    bullets: ['Delivered sites and campaigns for a range of client brands.'],
+    role: 'Academic and Personal Project Developer',
+    org: 'Independent / Academic Projects',
+    period: '2020 - Present',
+    place: 'Indore, Madhya Pradesh, India',
+    summary: 'Developed academic and practice projects to strengthen skills in web development, backend programming, databases, and application design.',
+    bullets: [
+      'Practiced Java, Spring Boot, Python, PHP, SQL, and web development through application-based projects.',
+      'Built and explored database-driven applications involving CRUD operations, API integration, and server-side logic.',
+      'Used development and AI-assisted coding tools to troubleshoot problems, improve implementation, and learn new technologies.',
+    ],
   },
 ];
 
 export const education: School[] = [
-  { school: 'Example University', credential: 'Master of Design', period: '2020 - 2022' },
-  { school: 'Sample College', credential: 'Bachelor of Arts - Visual Communication', period: '2015 - 2018' },
+  { school: 'Shri Vaishnav Vidyapeeth Vishwavidyalaya (SVVV), Indore', credential: 'Bachelor of Technology (B.Tech) in Computer Science Engineering - Artificial Intelligence, with IBM', period: '2020 - 2024' },
 ];
 
-export const certifications: string[] = ['Certification one', 'Certification two', 'Certification three'];
-export const languages: string[] = ['English - full professional', 'Second language - conversational'];
+export const certifications: string[] = [];
+export const languages: string[] = ['English', 'Hindi'];

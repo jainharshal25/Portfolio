@@ -1,13 +1,14 @@
 ---
 import { projects } from '~/data/projects';
+import { pageCopy } from '~/lib/site';
 // The first four fill a 2x2 of square tiles; any further project gets a full-width bar below.
 const squares = projects.slice(0, 4);
 const wide = projects.slice(4);
 ---
 <section class="section" id="projects" aria-labelledby="projects-title">
-  <p class="section__kicker reveal">Projects</p>
-  <h2 id="projects-title" class="section__title reveal">Selected work.</h2>
-  <p class="section__lede reveal">Four tiles and one featured project. Edit them in src/data/projects.ts.</p>
+  <p class="section__kicker reveal">{pageCopy.projects.kicker}</p>
+  <h2 id="projects-title" class="section__title reveal">{pageCopy.projects.title}</h2>
+  <p class="section__lede reveal">{pageCopy.projects.lede}</p>
   <ul class="projects" role="list">
     {squares.map((project) => (
       <li class="glass project reveal" data-tilt>

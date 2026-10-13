@@ -1,12 +1,12 @@
 ---
-import { site } from '~/lib/site';
+import { pageCopy, site } from '~/lib/site';
 ---
 <section class="section contact" id="contact" aria-labelledby="contact-title">
   <div class="glass contact__card reveal" data-tilt>
     <img class="contact__avatar" src="/assets/brand/avatar-192.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
-    <p class="section__kicker">Contact</p>
-    <h2 id="contact-title" class="section__title contact__title">Let's work together.</h2>
-    <p class="section__lede contact__lede">Say what you're open to: roles, freelance projects, collaborations, or just a hello.</p>
+    <p class="section__kicker">{pageCopy.contact.kicker}</p>
+    <h2 id="contact-title" class="section__title contact__title">{pageCopy.contact.title}</h2>
+    <p class="section__lede contact__lede">{pageCopy.contact.lede}</p>
     <div class="contact__actions">
       <a class="btn btn--primary" href={`mailto:${site.contactEmail}`}>Email me</a>
       <a class="btn btn--ghost" href={site.linkedin} target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>

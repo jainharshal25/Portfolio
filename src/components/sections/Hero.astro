@@ -1,17 +1,25 @@
 ---
 import { proof } from '~/data/profile';
-import { site } from '~/lib/site';
+import { pageCopy, site } from '~/lib/site';
+import ProfileCard from '~/components/ui/ProfileCard';
 // The first word sits on line one; the rest gets the accent gradient.
 const [first, ...others] = site.name.split(' ');
 const rest = others.join(' ');
 ---
 <section class="hero section" id="top" aria-labelledby="hero-title">
-  <p class="section__kicker reveal">{site.role} · {site.status.split(' · ').pop()}</p>
-  <h1 id="hero-title" class="hero__title reveal">{first}<br /><span>{rest}</span></h1>
-  <p class="section__lede hero__lede reveal">One or two sentences on what you do, who you do it for, and the proof. Keep it short — the stats below carry the numbers.</p>
-  <div class="hero__ctas reveal">
-    <a class="btn btn--primary" href="#projects">See my work</a>
-    <a class="btn btn--ghost" href="#contact">Get in touch</a>
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="section__kicker reveal">{site.role} · {site.status.split(' · ').pop()}</p>
+      <h1 id="hero-title" class="hero__title reveal">{first}<br /><span>{rest}</span></h1>
+      <p class="section__lede hero__lede reveal">{pageCopy.hero}</p>
+      <div class="hero__ctas reveal">
+        <a class="btn btn--primary" href="#projects">View projects</a>
+        <a class="btn btn--ghost" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <div class="hero__profile reveal">
+      <ProfileCard avatarUrl="/media/harshal.png" miniAvatarUrl="/media/harshal.png" name="Harshal Jain" title="Software Developer | Web Developer" handle="jainharshal25" status="Open to opportunities" contactText="" theme="dark" client:load />
+    </div>
   </div>
   <ul class="hero__proof reveal" role="list">
     {proof.map((item) => (
@@ -21,6 +29,8 @@ const rest = others.join(' ');
 </section>
 <style>
   .hero { min-height: 92svh; display: flex; flex-direction: column; justify-content: center; padding-top: 120px; padding-bottom: 32px; }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); gap: clamp(28px, 6vw, 92px); align-items: center; }
+  .hero__profile { display: grid; justify-items: center; }
   .hero__title { margin: 0; font-size: clamp(3rem, 9vw, 7.5rem); font-weight: 700; line-height: .92; letter-spacing: -.045em; }
   .hero__title span { background: linear-gradient(100deg, #b9ffd7, var(--accent) 60%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero__lede { font-size: clamp(1.05rem, 1.6vw, 1.3rem); }
@@ -29,5 +39,6 @@ const rest = others.join(' ');
   .hero__stat { border-radius: 18px; padding: 16px 18px; display: grid; gap: 4px; }
   .hero__stat strong { font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 700; letter-spacing: -.02em; color: var(--accent); }
   .hero__stat span { font-size: .82rem; color: var(--ink-soft); }
+  @media (max-width: 820px) { .hero__grid { grid-template-columns: 1fr; } .hero__profile { justify-items: start; } }
   @media (max-width: 720px) { .hero__proof { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 </style>
