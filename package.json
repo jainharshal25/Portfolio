@@ -27,29 +27,29 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/react": "^7.0.1",
+    "@astrojs/react": "^7.1.0",
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource-variable/inter-tight": "^5.3.0",
     "@hugeicons/core-free-icons": "^4.3.5",
     "@hugeicons/react": "^1.1.10",
-    "@iconify-json/logos": "^1.2.15",
+    "@iconify-json/logos": "^1.2.16",
     "@iconify/utils": "^3.1.7",
-    "astro": "^7.3.5",
+    "astro": "^7.4.0",
     "gsap": "^3.15.0",
-    "lenis": "^1.3.26",
-    "motion": "^14.2.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "lenis": "^1.3.27",
+    "motion": "^14.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
+    "@playwright/test": "^1.64.1",
     "@types/node": "^22.9.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "sharp": "^0.35.5",
     "tsx": "^4.20.0",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.5"
   },
   "engines": {
     "node": ">=22.12.0"
